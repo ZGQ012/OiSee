@@ -37,7 +37,7 @@ public class MymFragment extends Fragment implements View.OnClickListener {
     private LinearLayout wodejifen;
     private LinearLayout wodeyingxiao;
     private LinearLayout jiaoshishenqing;
-    private TextView zhuboshenqing;
+    private LinearLayout zhuboshenqing;
     private LinearLayout wodeshoucang;
     private LinearLayout wodedingyue;
     private LinearLayout youhuijuan;
