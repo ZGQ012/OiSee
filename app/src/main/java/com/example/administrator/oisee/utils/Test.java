@@ -9,8 +9,4 @@ public class Test {
     public void test1() {
         Log.i(TAG, "test1: ");
     }
-
-    public void test2(){
-        Log.i(TAG, "test2: ");
-    }
 }
