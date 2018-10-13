@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/phonebg"
+    android:orientation="vertical"
+    android:id="@+id/beijing"
+    tools:context=".Activity.PhoneActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageView
+            android:id="@+id/toolbar_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:singleLine="true"
+            android:src="@drawable/back_white"
+            android:text="@string/title_activity_login"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="@string/title_activity_phoneregsin"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/phone_white" />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:text="@string/guojiaquhao"-->
+        <!--android:textColor="@color/colorWhite" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginLeft="3dp"-->
+        <!--android:layout_marginRight="6dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:src="@drawable/sanjiao_y" />-->
+       <TextView
+           android:id="@+id/guojiaquhao"
+           android:layout_gravity="center"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="国家区号"/>
+        <!--<com.contrarywind.view.WheelView-->
+            <!--android:id="@+id/wheelview"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<android.support.v7.widget.AppCompatSpinner-->
+            <!--android:id="@+id/spinner"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:theme="@style/myDropTheme"-->
+            <!--android:prompt="@string/tishi"-->
+            <!--android:spinnerMode="dialog"-->
+            <!--&gt;-->
+        <!--</android.support.v7.widget.AppCompatSpinner>-->
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/divider_color" />
+
+        <EditText
+            android:id="@+id/edit_shoujihao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:hint="@string/qingshuru"
+            android:textColorHint="@color/colorWhite" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:drawablePadding="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_yanzhengma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_rectangle"
+            android:drawableLeft="@drawable/msg_code_white"
+            android:drawablePadding="10dp"
+            android:hint="@string/yanzhengma"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="110dp"
+            android:paddingTop="10dp"
+            android:textColorHint="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/fasong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/btn_y"
+            android:text="@string/fasongyanzhengma" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edit_yaoqingma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:drawablePadding="10dp"
+        android:hint="@string/yaoqingma"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColorHint="@color/colorWhite" />
+    <EditText
+        android:id="@+id/edit_mima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_rectangle"
+        android:drawableLeft="@drawable/login_lock"
+        android:drawablePadding="10dp"
+        android:hint="@string/shezhimima"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColorHint="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/qiehuanzhuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/qiehuanzhuce"
+        android:textColor="@color/colorWhite" />
+    <Button
+        android:id="@+id/shezhimima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/btn_y"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/shezhimima" />
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,162 @@
+<resources>
+    <string name="str_re_nom">按住说话</string>
+    <string name="str_re_recding">松开结束</string>
+    <string name="str_want">松开手指,取消发送</string>
+    <string name="app_name">OiSee</string>
+    <string name="tishi">国家区号</string>
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_regsin">去注册</string>
+    <string name="title_activity_phoneregsin">手机号注册</string>
+    <string name="video">视频/音频上传</string>
+    <string name="title_activity_Emilregsin">邮箱找回密码</string>
+    <string name="quxiao">取消</string>
+    <string name="zhuboshenqing">主播申请</string>
+    <string name="Teacher">教师评价</string>
+    <string name="Mycollection">我的收藏</string>
+    <string name="shoucangguanli">收藏管理</string>
+    <string name="activity_Emil">邮箱注册</string>
+    <string name="Myprofile">我的资料</string>
+    <string name="baocun">保存</string>
+    <string name="getbuck">找回密码</string>
+    <string name="fanhuijianyi">反馈建议</string>
+    <string name="wodeqianbao">我的钱包</string>
+    <string name="wodeshezhi">我的设置</string>
+    <string name="wodeyuyue">我的预约</string>
+    <string name="shurushoujihao">请输入手机号或邮箱</string>
+    <string name="shurumima">请输入密码</string>
+    <string name="wangjimima">忘记密码?</string>
+    <string name="qiehuandenglu">切换邮箱登陆</string>
+    <string name="qiehuanzhuce">切换邮箱注册</string>
+    <string name="disanfangdenglu">第三方登录</string>
+    <!-- AnchorActivity-->
+    <string name="wanshanxinxi">完善信息</string>
+    <string name="pingtaishenhe">平台审核</string>
+    <string name="shenhetongguo">审核通过</string>
+    <string name="xingming">姓名</string>
+    <string name="guoji">国籍</string>
+    <string name="xingbie">性别</string>
+    <string name="shengri">生日</string>
+    <string name="zhibofenlei">直播分类</string>
+    <string name="zhiboyuyan">直播语言</string>
+    <string name="wenzimiaoshu">文字描述</string>
+    <string name="qingshuruneirong">请输入内容</string>
+    <string name="youxiang">邮箱</string>
+    <string name="yanzheng">验证</string>
+    <string name="dai">带</string>
+    <string name="debitian">的必填</string>
+    <string name="dianhua">电话</string>
+    <string name="qingshurudianhua">请输入电话</string>
+    <string name="shipinyinpinjieshao">视频介绍/音频介绍</string>
+    <string name="jingli">经历(教师资格证、毕业证等)</string>
+    <string name="huzhao">护照/身份证/驾照上传</string>
+    <string name="pingtaishenheshijian">平台审核时间一般为三个工作日</string>
+    <string name="nan">男</string>
+    <string name="nv">女</string>
+    <!-- EmilActivity-->
+    <string name="qingshuruyouxianghao">请输入邮箱</string>
+    <string name="yanzhengma">验证码</string>
+    <string name="fasongyanzhengma">发送验证码</string>
+    <string name="shezhixinmima">设置新密码</string>
+    <string name="zhaohui">找回</string>
+    <!-- EmilReActivity-->
+    <string name="shezhimima">设置密码</string>
+    <string name="yaoqingma">邀请码(非必填)</string>
+    <string name="querenmima">确认密码</string>
+    <string name="zhuce">注册</string>
+    <string name="yiyouzhanghao">已有账号?</string>
+    <string name="fanhuidenglu">返回登录</string>
+    <string name="zhucejitongyi">注册即同意</string>
+    <string name="yonghuxieyi">《OiSee用户协议》</string>
+    <!-- FeedbackActivity-->
+    <string name="xiexiayijian">写下您遇到的问题,或告诉我们您的宝贵意见~</string>
+    <string name="nidelianxifangshi">您的联系方式(手机号或邮箱)</string>
+    <string name="tijiao">提交</string>
+    <!-- FindActivity-->
+    <string name="xuexishichang">学习时长</string>
+    <string name="fensi">粉丝</string>
+    <string name="yiguanzhu">已关注</string>
+    <string name="xunzhangzhanshi">勋章展示</string>
+    <string name="sixin">私信</string>
+    <string name="guanzhu">+ 关注</string>
+    <!-- MycollectionActivity-->
+    <string name="kechengshoucang">课程收藏</string>
+    <string name="pindanshoucang">拼单收藏</string>
+    <string name="wenzhangshoucang">文章收藏</string>
+    <!-- MymentActivity-->
+    <string name="woyyuedeshijian">我预约的日期</string>
+    <!-- MyprofileActivity-->
+    <string name="touxiang">头像</string>
+    <string name="nicheng">昵称</string>
+    <string name="gexingqianming">个性签名</string>
+    <string name="wenzijieshao">文字介绍</string>
+    <string name="yuyinjieshao">语音介绍</string>
+    <string name="shipinjieshao">视频介绍</string>
+    <!-- MysettingsActivity-->
+    <string name="qiehuanzhanghu">切换账户</string>
+    <string name="genghuanmima">更换密码</string>
+    <string name="yuyan">语言</string>
+    <string name="zhifufangshi">支付方式</string>
+    <string name="tongyongshezhi">通用设置</string>
+    <string name="zhifuzhongxin">支付中心</string>
+    <string name="miandarao">免打扰</string>
+    <string name="shiyongtiaokuan">使用条款</string>
+    <string name="yinsizhengce">隐私政策</string>
+    <string name="baogaocuowu">报告错误</string>
+    <string name="banben">版本</string>
+    <string name="tuichuzhanghu">退出当前账户</string>
+    <!-- MywalletActivity-->
+    <string name="zhanghuyue">账户余额</string>
+    <string name="chongzhi">充值</string>
+    <string name="tixian">提现</string>
+    <string name="jiaoyimingxi">交易明细</string>
+    <!-- PhoneActivity-->
+    <string name="guojiaquhao">国家区号</string>
+    <string name="qingshuru">请输入手机号</string>
+    <string name="qingshuruyxhsjh">请输入手机号或邮箱</string>
+    <string name="huoquyanzhengma">获取验证码</string>
+    <!-- PhonegetbackActivity-->
+    <string name="zhaohuimima">找回密码</string>
+    <!-- TeacherActivity-->
+    <string name="kouyin">口音</string>
+    <string name="yusu">语速</string>
+    <string name="jiaoxueneirong">教学内容</string>
+    <string name="ketangqifen">课堂气氛</string>
+    <string name="fuwutaidu">服务态度</string>
+    <string name="gengduo">更多</string>
+    <string name="zifuyinei">100字符以内</string>
+    <string name="shangchuantupian">上传图片</string>
+    <!-- VideoActivity-->
+    <string name="yinpinshangchuan">音频上传</string>
+    <string name="anzhukaishiluyin">按住开始录音</string>
+    <string name="shipinshangchuan">视频上传</string>
+    <string name="shangchuan">上传</string>
+    <!-- FindCountryActivity-->
+    <string name="chazhaoguojia">查找国家</string>
+    <!-- MainActivity-->
+    <string name="wode">我的</string>
+    <string name="jiaoxue">教学</string>
+    <string name="zhibo">直播</string>
+    <string name="faxian">发现</string>
+
+    <string name="trimmed_done">视频裁剪完成！</string>
+    <string name="trimming">正在裁剪视频...</string>
+    <string name="compressing">正在压缩视频...</string>
+    <string name="compressed_done">视频压缩完成！</string>
+    <string name="video_shoot_tip">拖动选择你要发表的%d秒以内片段！</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
