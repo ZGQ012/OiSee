@@ -7,6 +7,6 @@ public class Test {
     private static final String TAG = "Test";
 
     public void test2(){
-        Log.i(TAG, "test2: ");
+        Log.i(TAG, "测试信息: ");
     }
 }
