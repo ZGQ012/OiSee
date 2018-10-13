@@ -6,6 +6,6 @@ public class Test {
     private static final String TAG = "Test";
 
     public void test1() {
-        Log.i(TAG, "test123: ");
+        Log.i(TAG, "test1: ");
     }
 }
