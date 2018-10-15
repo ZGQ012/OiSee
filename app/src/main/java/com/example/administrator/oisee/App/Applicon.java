@@ -41,7 +41,6 @@ public class Applicon extends Application {
     public static String[] TabLayoutTitl2;
     public static List<String> listxingbie = new ArrayList<>();
     public JSONObject jsonObject;
-
     @Override
     public void onCreate() {
         super.onCreate();
