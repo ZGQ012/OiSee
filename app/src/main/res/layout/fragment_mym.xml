@@ -706,6 +706,7 @@
                 android:background="@color/divider_color"
                 />
             <LinearLayout
+                android:id="@+id/zhuboshenqing"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal"
@@ -720,7 +721,6 @@
                     android:background="@color/transparent"
                     />
                 <TextView
-                    android:id="@+id/zhuboshenqing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="主播申请"
