@@ -3,11 +3,13 @@ package com.example.administrator.oisee.Fragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 import com.example.administrator.oisee.App.Applicon;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
     public FragmentAdapter(FragmentManager fm) { super(fm);
+
     }
 
     @Override
@@ -15,6 +17,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
+                Log.e("ssss","ssdsdsa");
                 fragment=new TeachingFragment();//教学
                 break;
             case 1:

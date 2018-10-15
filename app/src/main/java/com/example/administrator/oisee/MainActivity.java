@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TimeUnit KEEP_ALIVE_TIME_UNIT = TimeUnit.SECONDS;
     private ExecutorService executorService = new ThreadPoolExecutor(NUMBER_OF_CORES, NUMBER_OF_CORES * 2, KEEP_ALIVE_TIME, KEEP_ALIVE_TIME_UNIT, new LinkedBlockingDeque<Runnable>(128));
     private ProgressDialog mProgressDialog;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,17 +68,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         initview();
-        //创建ProgressDialog
-        createProgressDialog();
         //启动线程
         executorService.execute(mRunnable);
-
     }
+
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             //若工作完成，取消动画，初始化界面
             if (msg.what == 1)
-                mProgressDialog.cancel();
+            {}
             /*//开始初始化界面
             initView();*/
         }
@@ -97,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mHandler.sendMessage(msg);
         }
     };
+
     /**
      * 创建ProrgressDialog
      */
@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mProgressDialog.setMessage("加载数据中,请稍等...");
         mProgressDialog.show();
     }
+
     private void data() {
         viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 if (tab.getPosition() == 3) {
-                    if (Config.longzhuangtai==0) {
+                    if (Config.longzhuangtai == 0) {
                         startActivity(new Intent(MainActivity.this, LoginActivity.class));
                         finish();
                     }

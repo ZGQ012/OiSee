@@ -16,7 +16,7 @@
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/scrolv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -24,8 +24,8 @@
 
                 <com.example.administrator.oisee.PtrF.FixScrollerRecyclerView
                     android:id="@+id/Re1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:nestedScrollingEnabled="false">
                 </com.example.administrator.oisee.PtrF.FixScrollerRecyclerView>
                 <View
@@ -34,8 +34,8 @@
                     android:background="@color/divider_color" />
                 <com.example.administrator.oisee.PtrF.FixScrollerRecyclerView
                     android:id="@+id/Re2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:nestedScrollingEnabled="false">
 
                 </com.example.administrator.oisee.PtrF.FixScrollerRecyclerView>

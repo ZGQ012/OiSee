@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,8 @@ import com.example.administrator.oisee.Adapter.MyAdapter;
 import com.example.administrator.oisee.Adapter.MyAdapterRe;
 import com.example.administrator.oisee.MainActivity;
 import com.example.administrator.oisee.R;
+import com.example.administrator.oisee.RemenDialog.GobalDialog;
+import com.example.administrator.oisee.View.IntentUitls;
 import com.example.administrator.oisee.View.PhotoInfo;
 import com.example.administrator.oisee.bean.Remen.JsonRootBean;
 import com.example.administrator.oisee.bean.Remen.Response;
@@ -72,7 +75,6 @@ public class RemenFragment extends Fragment {
     private MediaController controller;
     private int num = 1;
     private List<PhotoInfo> photolist = new ArrayList<PhotoInfo>();
-    private Dialog gobalDialog;
     private MyAdapterRe myAdapterRe;
     private RefreshLayout refreshLayout;
     private int NUMBER_OF_CORES = Runtime.getRuntime().availableProcessors();
@@ -81,6 +83,7 @@ public class RemenFragment extends Fragment {
     private ExecutorService executorService = new ThreadPoolExecutor(NUMBER_OF_CORES, NUMBER_OF_CORES * 2, KEEP_ALIVE_TIME, KEEP_ALIVE_TIME_UNIT, new LinkedBlockingDeque<Runnable>(128));
     private ProgressDialog mProgressDialog;
 
+
     public RemenFragment() {
         // Required empty public constructor
     }
@@ -88,8 +91,9 @@ public class RemenFragment extends Fragment {
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             //若工作完成，取消动画，初始化界面
-            if (msg.what == 1)
-                mProgressDialog.cancel();
+            if (msg.what == 1) {
+
+            }
             /*//开始初始化界面
             initView();*/
         }
@@ -137,8 +141,8 @@ public class RemenFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         initview(view);
         //创建ProgressDialog
-        createProgressDialog();
-        //启动线程
+//     createProgressDialog();
+        //启动线程s
         executorService.execute(mRunnable);
     }
 
@@ -226,8 +230,7 @@ public class RemenFragment extends Fragment {
         map.put("pagesize", "20");
         map.put("page", "1");
         map.put("sign", GetSign.getSign(map));
-        OkHttpUtils.get().url("http://121.40.186.118:10020/api/Found/GetFoundList").params(map)
-                .build().execute(new StringCallback() {
+        IntentUitls.SetIntent("http://121.40.186.118:10020/api/Found/GetFoundList", map, new StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
 
@@ -239,22 +242,12 @@ public class RemenFragment extends Fragment {
                 if (jsonRootBean1.getErrCode() == 0) {
                     myAdapterRe = new MyAdapterRe(jsonRootBean1.getResponse(), mcontext, getActivity());
                     //    myAdapterRe = new MyAdapterRe(jsonRootBean1.getResponse());
+
                     mRecyclerView2.setAdapter(myAdapterRe);
                     //myAdapterRe.notifyDataSetChanged();
                 } else {
                     Toast.makeText(mcontext, "" + jsonRootBean.getErrMsg(), Toast.LENGTH_SHORT).show();
                 }
-                // Drawable d=Drawable.createFromPath();
-//                try {
-//                   jsonObject.getJSONObject("Response").getString("image_url");
-//                    Picasso.with(PhoneActivity.this).load(beijings).into(target);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-
-
-                // jsonRootBean = JsonUtils.getbean(response, JsonRootBean.class);
-                //   spinner.setAdapter(new spannrAdapte(PhoneActivity.this, jsonRootBean));
             }
         });
 
@@ -332,7 +325,7 @@ public class RemenFragment extends Fragment {
     private void LoadMore() {
         if (Config.longzhuangtai == 1) {
             Reshangla();
-         }
+        }
     }
 
     //下拉刷新
@@ -349,8 +342,7 @@ public class RemenFragment extends Fragment {
         map.put("pagesize", "5");
         map.put("page", String.valueOf(num));
         map.put("sign", GetSign.getSign(map));
-        OkHttpUtils.get().url("http://121.40.186.118:10020/api/Found/GetFoundList").params(map)
-                .build().execute(new StringCallback() {
+        IntentUitls.SetIntent("http://121.40.186.118:10020/api/Found/GetFoundList", map, new StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
             }
@@ -363,23 +355,13 @@ public class RemenFragment extends Fragment {
                     if (jsonRootBean2.getResponse().size() != 0) {
                         jsonRootBean1.getResponse().addAll(jsonRootBean2.getResponse());
                         myAdapterRe.notifyDataSetChanged();
+                        //  myAdapterRe.notifyItemRangeInserted(jsonRootBean1.getResponse().size(),myAdapterRe.getItemCount());
                     } else {
                         Toast.makeText(mcontext, "没有更多数据啦", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(mcontext, "" + jsonRootBean.getErrMsg(), Toast.LENGTH_SHORT).show();
                 }
-                // Drawable d=Drawable.createFromPath();
-//                try {
-//                   jsonObject.getJSONObject("Response").getString("image_url");
-//                    Picasso.with(PhoneActivity.this).load(beijings).into(target);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-
-
-                // jsonRootBean = JsonUtils.getbean(response, JsonRootBean.class);
-                //   spinner.setAdapter(new spannrAdapte(PhoneActivity.this, jsonRootBean));
 
             }
         });

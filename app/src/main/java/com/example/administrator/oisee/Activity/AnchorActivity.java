@@ -67,7 +67,7 @@ public class AnchorActivity extends AppCompatActivity implements View.OnClickLis
         initview();
         initdata();
         //创建ProgressDialog
-        createProgressDialog();
+       // createProgressDialog();
         //启动线程
         executorService.execute(mRunnable);
     }
@@ -75,8 +75,10 @@ public class AnchorActivity extends AppCompatActivity implements View.OnClickLis
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             //若工作完成，取消动画，初始化界面
-            if (msg.what == 1)
-                mProgressDialog.cancel();
+            if (msg.what == 1){
+
+            }
+               // mProgressDialog.cancel();
             /*//开始初始化界面
             initView();*/
         }

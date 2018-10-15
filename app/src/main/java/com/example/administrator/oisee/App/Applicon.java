@@ -42,8 +42,6 @@ public class Applicon extends Application {
     public static List<String> listxingbie = new ArrayList<>();
     public JSONObject jsonObject;
 
-
-
     @Override
     public void onCreate() {
         super.onCreate();

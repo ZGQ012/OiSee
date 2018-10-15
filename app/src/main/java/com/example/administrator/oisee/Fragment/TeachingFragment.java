@@ -94,6 +94,7 @@ public class TeachingFragment extends Fragment implements ViewPager.OnPageChange
     private TimeUnit KEEP_ALIVE_TIME_UNIT = TimeUnit.SECONDS;
     private ExecutorService executorService = new ThreadPoolExecutor(NUMBER_OF_CORES, NUMBER_OF_CORES * 2, KEEP_ALIVE_TIME, KEEP_ALIVE_TIME_UNIT, new LinkedBlockingDeque<Runnable>(128));
     private ProgressDialog mProgressDialog;
+    private Dialog dialog;
 
     public TeachingFragment() {
         // Required empty public constructor
@@ -121,7 +122,7 @@ public class TeachingFragment extends Fragment implements ViewPager.OnPageChange
         ansy();
         looper();
           //创建ProgressDialog
-        createProgressDialog();
+    //    createProgressDialog();
         //启动线程
         executorService.execute(mRunnable);
     }
@@ -130,7 +131,7 @@ public class TeachingFragment extends Fragment implements ViewPager.OnPageChange
         public void handleMessage(android.os.Message msg) {
             //若工作完成，取消动画，初始化界面
             if (msg.what == 1)
-                mProgressDialog.cancel();
+            {}
             /*//开始初始化界面
             initView();*/
         }
